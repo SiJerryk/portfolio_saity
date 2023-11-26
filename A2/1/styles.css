@@ -1,0 +1,44 @@
+/* Общие стили для таблицы и ячеек */
+.calendar {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.calendar, .calendar th, .calendar td {
+    border: 1px solid #ddd;
+}
+
+.calendar th, .calendar td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Стили для заголовка месяца */
+.calendar caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Стили для заголовков столбцов (дней недели) */
+.day-header {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.day-headers {
+    background-color: #4595ca;
+    color: black;
+    font-weight: bold;
+}
+
+/* Дополнительные декоративные элементы */
+.calendar tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.calendar tbody td:hover {
+    background-color: #ddd;
+}

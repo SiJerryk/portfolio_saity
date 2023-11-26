@@ -1,0 +1,11 @@
+.styled-block {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+}
+
+#unique-block {
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 10px;
+}

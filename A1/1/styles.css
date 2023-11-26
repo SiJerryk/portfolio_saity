@@ -1,0 +1,9 @@
+.change-color-button {
+    background-color: black;
+    color: red;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+.button:hover {
+    background-color: red;
+}

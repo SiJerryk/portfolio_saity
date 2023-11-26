@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Простой калькулятор</h2>
+
+<label for="number1">Введите первое число:</label>
+<input type="text" id="number1">
+
+<label for="operation">Выберите операцию (+, -, *, /):</label>
+<input type="text" id="operation">
+
+<label for="number2">Введите второе число:</label>
+<input type="text" id="number2">
+
+<button onclick="calculate()">Вычислить</button>
+
+<script>
+    function sum(a, b) {
+        return a + b;
+    }
+
+    function subtract(a, b) {
+        return a - b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    function divide(a, b) {
+        if (b !== 0) {
+            return a / b;
+        } else {
+            alert("Ошибка: Деление на ноль!");
+        }
+    }
+
+    function calculate() {
+        var number1 = parseFloat(document.getElementById("number1").value);
+        var number2 = parseFloat(document.getElementById("number2").value);
+        var operation = document.getElementById("operation").value;
+
+        var result;
+
+        switch (operation) {
+            case '+':
+                result = sum(number1, number2);
+                break;
+            case '-':
+                result = subtract(number1, number2);
+                break;
+            case '*':
+                result = multiply(number1, number2);
+                break;
+            case '/':
+                result = divide(number1, number2);
+                break;
+            default:
+                alert("Ошибка: Неподдерживаемая операция");
+                return;
+        }
+
+        alert(`Результат: ${result}`);
+    }
+</script>
+
+</body>
+</html>
